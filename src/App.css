@@ -24,6 +24,8 @@
 h1,
 h2 {
   font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 h1 {
@@ -39,11 +41,15 @@ h2 {
 h3 {
   font-size: 18px;
   margin-bottom: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 /* Paragraphs */
 p {
   color: var(--dark-grey);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 /* Pictures */
@@ -89,6 +95,7 @@ main > div:first-child img {
 main > div:nth-child(2) {
   display: flex;
   background-color: var(--light-grey);
+  align-items: flex-start;
 }
 
 main > div:nth-child(2) > div:first-child {
@@ -142,6 +149,7 @@ main > div:nth-child(2) > div:first-child {
   color: var(--dark-grey);
   height: 32px;
   overflow: hidden;
+  margin-right: 10px;
 }
 
 .meal-vignette > div > div > span:first-child {
@@ -158,7 +166,7 @@ main > div:nth-child(2) > div:first-child {
 
 .cart {
   width: 350px;
-  height: 190px;
+  min-height: 180px;
   background-color: #fff;
   border-radius: 5px;
   position: sticky;
@@ -188,6 +196,8 @@ main > div:nth-child(2) > div:first-child {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: violet;
+  height: 100%;
 }
 
 /* Loading */

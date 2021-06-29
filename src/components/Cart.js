@@ -1,10 +1,13 @@
 import CartItem from "./CartItem";
 
 const Cart = ({ cart, addToCart, substractFromCart }) => {
-  const subtotal = 0;
+  let subtotal = 0;
+  for (let i = 0; i < cart.length; i++) {
+    subtotal += Number(cart[i].price) * cart[i].quantity;
+  }
   const deliveryFees = 2.5;
   const total = subtotal + deliveryFees;
-
+  console.log(cart);
   return (
     <div className="container cart">
       <button
@@ -35,16 +38,16 @@ const Cart = ({ cart, addToCart, substractFromCart }) => {
           <div>
             <div>
               <span>Sous-Total</span>
-              <span>{subtotal} euros</span>
+              <span>{subtotal.toFixed(2)} euros</span>
             </div>
             <div>
               <span>Frais de livraison</span>
-              <span>{deliveryFees} euros</span>
+              <span>{deliveryFees.toFixed(2)} euros</span>
             </div>
           </div>
           <div>
             <span>Total</span>
-            <span>{total} euros</span>
+            <span>{total.toFixed(2)} euros</span>
           </div>
         </div>
       )}
