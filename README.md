@@ -6,11 +6,13 @@
 
 👉 Netlify Link to see the live version [HERE](https://deliveroo-pb.netlify.app/)
 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/80970440/123823682-b6cac680-d8fd-11eb-8921-f1b8ca98e5fd.gif)
+
 _Made in 2021 @ Le Reacteur_
 
 ### ⚙️ Main functionalities :
 
-Add an item to cart || Modify content of cart (no duplicate entry) || Automatic calculation of the items in the cart
+Add an item to cart || Modify content of cart (no duplicate entry, delete item of the cart if the quantity is 0) || Automatic calculation of the total
 
 ### 🔧 Stack
 
