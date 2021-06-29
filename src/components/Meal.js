@@ -14,9 +14,9 @@ const Meal = ({ addToCart, meal }) => {
         <h3>{meal.title}</h3>
         <p>{meal.description}</p>
         <div>
-          <span>{meal.price}</span>
+          <span>{meal.price} €</span>
           {meal.popular && (
-            <span>
+            <span className="orange">
               <FontAwesomeIcon icon="star" /> Populaire
             </span>
           )}

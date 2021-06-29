@@ -4,6 +4,7 @@ const Cart = ({ cart, addToCart, substractFromCart }) => {
   const subtotal = 0;
   const deliveryFees = 2.5;
   const total = subtotal + deliveryFees;
+
   return (
     <div className="container cart">
       <button
@@ -12,17 +13,22 @@ const Cart = ({ cart, addToCart, substractFromCart }) => {
       >
         Valider mon panier
       </button>
+
       <div>
-        {cart.map((item) => {
-          return (
-            <CartItem
-              key={item.id}
-              item={item}
-              addToCart={addToCart}
-              substractFromCart={substractFromCart}
-            />
-          );
-        })}
+        {cart.length === 0 ? (
+          <p>Votre panier est vide</p>
+        ) : (
+          cart.map((item) => {
+            return (
+              <CartItem
+                key={item.id}
+                item={item}
+                addToCart={addToCart}
+                substractFromCart={substractFromCart}
+              />
+            );
+          })
+        )}
       </div>
       {cart.length > 0 && (
         <div>

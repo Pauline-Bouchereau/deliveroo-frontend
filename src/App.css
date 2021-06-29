@@ -5,6 +5,8 @@
   --deliveroo-green: #02cdbd;
   --dark-grey: #868a8a;
   --light-grey: #f2f5f5;
+  --orange: #ff8004;
+  --button-grey: #bac3c3;
 }
 
 * {
@@ -14,7 +16,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 30px 15px;
+  padding: 20px 15px;
 }
 
 /* Titles */
@@ -58,7 +60,7 @@ header {
 }
 
 header img {
-  width: 160px;
+  width: 140px;
 }
 
 /* ----------------- */
@@ -97,24 +99,59 @@ main > div:nth-child(2) > div:first-child {
 
 .menu-category {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu-category > div {
+  display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 
 /* Meal */
 .meal-vignette {
-  width: 300px;
+  width: calc(100% / 2 - 10px);
   display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  height: 160px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .meal-vignette:nth-child(odd) {
   margin-right: 20px;
 }
 
+.meal-vignette > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .meal-vignette img {
   height: 130px;
   width: 130px;
   border-radius: 5px;
+}
+
+.meal-vignette p {
+  color: var(--dark-grey);
+  height: 32px;
+  overflow: hidden;
+}
+
+.meal-vignette > div > div > span:first-child {
+  font-size: 18px;
+  margin-right: 15px;
+  color: var(--dark-grey);
+}
+
+.orange {
+  color: var(--orange);
 }
 
 /* Cart */
@@ -127,6 +164,30 @@ main > div:nth-child(2) > div:first-child {
   position: sticky;
   top: 30px;
   margin-top: 30px;
+  padding: 10px;
+}
+
+.cart > button {
+  width: 100%;
+  height: 50px;
+  background-color: var(--deliveroo-green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cart .disabled {
+  background-color: var(--button-grey);
+  color: var(--dark-grey);
+}
+
+.cart > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Loading */
