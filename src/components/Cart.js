@@ -7,7 +7,7 @@ const Cart = ({ cart, addToCart, substractFromCart }) => {
   }
   const deliveryFees = 2.5;
   const total = subtotal + deliveryFees;
-  console.log(cart);
+
   return (
     <div className="container cart">
       <button
@@ -17,7 +17,7 @@ const Cart = ({ cart, addToCart, substractFromCart }) => {
         Valider mon panier
       </button>
 
-      <div>
+      <div className={cart.length !== 0 ? "full-cart" : ""}>
         {cart.length === 0 ? (
           <p>Votre panier est vide</p>
         ) : (
@@ -37,17 +37,17 @@ const Cart = ({ cart, addToCart, substractFromCart }) => {
         <div>
           <div>
             <div>
-              <span>Sous-Total</span>
-              <span>{subtotal.toFixed(2)} euros</span>
+              <p>Sous-Total</p>
+              <p>{subtotal.toFixed(2)} €</p>
             </div>
             <div>
-              <span>Frais de livraison</span>
-              <span>{deliveryFees.toFixed(2)} euros</span>
+              <p>Frais de livraison</p>
+              <p>{deliveryFees.toFixed(2)} €</p>
             </div>
           </div>
           <div>
-            <span>Total</span>
-            <span>{total.toFixed(2)} euros</span>
+            <p>Total</p>
+            <p>{total.toFixed(2)} €</p>
           </div>
         </div>
       )}

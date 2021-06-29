@@ -1,23 +1,25 @@
 const CartItem = ({ item, addToCart, substractFromCart }) => {
   return (
-    <div>
-      <button
-        onClick={() => {
-          substractFromCart(item);
-        }}
-      >
-        -
-      </button>
-      <span>{item.quantity}</span>
-      <button
-        onClick={() => {
-          addToCart(item);
-        }}
-      >
-        +
-      </button>
-      <span>{item.title}</span>
-      <span>{item.price}</span>
+    <div className="cart-item">
+      <div>
+        <button
+          onClick={() => {
+            substractFromCart(item);
+          }}
+        >
+          -
+        </button>
+        <span>{item.quantity}</span>
+        <button
+          onClick={() => {
+            addToCart(item);
+          }}
+        >
+          +
+        </button>
+        <p>{item.title}</p>
+      </div>
+      <span>{item.price} €</span>
     </div>
   );
 };

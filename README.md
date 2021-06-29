@@ -21,9 +21,9 @@ Add an item to cart || Modify content of cart (no duplicate entry) || Automatic 
 
 ### 🪛 Package
 
-✔️ axios
-✔️ @fortawesome/fontawesome-svg-core
-✔️ @fortawesome/free-solid-svg-icons
+✔️ axios  
+✔️ @fortawesome/fontawesome-svg-core  
+✔️ @fortawesome/free-solid-svg-icons  
 ✔️ @fortawesome/react-fontawesome
 
 ### 🚀 Running the project
